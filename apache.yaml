@@ -1,0 +1,10 @@
+---
+- name: apache play
+  host: all
+  become: true
+  tasks:
+    - name : update ubuntu package
+      apt:
+        name : apache2
+        update_cache: yes
+        state: present 
